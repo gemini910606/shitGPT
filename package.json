@@ -7,7 +7,7 @@
     "mask:watch": "npx watch \"yarn mask\" app/masks",
     "dev": "concurrently -r \"yarn run mask:watch\" \"next dev\"",
     "build": "yarn mask && next build",
-    "deploy": "npm run build && npx @opennextjs/cloudflare build --dangerouslyUseUnsupportedNextVersion && cp .open-next/worker.js .open-next/assets/_worker.js",
+    "deploy": "npm run build && npx @opennextjs/cloudflare build --dangerouslyUseUnsupportedNextVersion && node -e \"const fs=require('fs'); fs.copyFileSync('.open-next/worker.js','.open-next/assets/_worker.js'); ['cloudflare','server-functions','.build','middleware'].forEach(d=>{if(fs.existsSync('.open-next/'+d))fs.cpSync('.open-next/'+d,'.open-next/assets/'+d,{recursive:true})})\"",
     "start": "next start",
     "lint": "next lint",
     "export": "yarn mask && cross-env BUILD_MODE=export BUILD_APP=1 next build",
