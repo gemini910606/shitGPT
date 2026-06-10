@@ -1,4 +1,7 @@
 name = "shitgpt"
-pages_build_output_dir = ".open-next/assets"
-compatibility_date = "2024-09-23"
+compatibility_date = "2026-06-09"
 compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".open-next/assets"
+
+[observability]
+enabled = true
