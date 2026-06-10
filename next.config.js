@@ -87,7 +87,7 @@ if (mode !== "export") {
       },
       {
         source: "/api/proxy/lmstudio/:path*",
-        destination: "https://api.lae200289.org/v1/:path*",
+        destination: "https://api.lae200289.org/:path*",
       },
     ];
     return { beforeFiles: ret };
