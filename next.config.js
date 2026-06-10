@@ -89,10 +89,6 @@ if (mode !== "export") {
         source: "/api/proxy/lmstudio/:path*",
         destination: "https://api.lae200289.org/:path*",
       },
-      {
-        source: "/rustdesk/:path*",
-        destination: "https://rustdesk.com/:path*",
-      },
     ];
     return { beforeFiles: ret };
   };
