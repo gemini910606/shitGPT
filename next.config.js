@@ -85,6 +85,10 @@ if (mode !== "export") {
         source: "/api/proxy/alibaba/:path*",
         destination: "https://dashscope.aliyuncs.com/api/:path*",
       },
+      {
+        source: "/api/proxy/lmstudio/:path*",
+        destination: "https://api.lae200289.org/v1/:path*",
+      },
     ];
     return { beforeFiles: ret };
   };
